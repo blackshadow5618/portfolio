@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.color-picker,
+.brush-size {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: #2d3436;
+}
+
+#color {
+  width: 50px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#brushSize {
+  width: 100px;
+}
+
+#sizeValue {
+  min-width: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #e84393;
+}
+
+button {
+  background-color: #e84393;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #fd79a8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#canvas {
+  border: 3px solid #2d3436;
+  border-radius: 10px;
+  background-color: white;
+  cursor: crosshair;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: auto;
+}
+
+.instructions {
+  margin-top: 20px;
+  font-style: italic;
+  color: #636e72;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .color-picker,
+  .brush-size {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #brushSize {
+    flex: 1;
+  }
+}
