@@ -29,10 +29,10 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="filter-buttons">
-        <button onclick="filterProjects('all')">All</button>
-        <button onclick="filterProjects('advanced')">Advanced</button>
-        <button onclick="filterProjects('vanilla-js')">Vanilla JS</button>
-        <button onclick="filterProjects('useful')">Useful</button>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="advanced">Advanced</button>
+        <button class="filter-btn" data-filter="vanilla-js">Vanilla JS</button>
+        <button class="filter-btn" data-filter="useful">Useful</button>
       </div>
       <div class="project-grid" id="projectGrid">
         <!-- Projects will be populated by JS -->

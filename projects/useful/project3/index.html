@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note-Taking App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Note-Taking App</h1>
+        <button id="addNoteBtn" class="btn btn-primary">Add New Note</button>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search notes..."
+          class="search-input"
+        />
+        <select id="categoryFilter" class="category-filter">
+          <option value="all">All Categories</option>
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="ideas">Ideas</option>
+          <option value="reminders">Reminders</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="notes-grid" id="notesGrid">
+        <!-- Notes will be populated here -->
+      </div>
+
+      <!-- Note Modal -->
+      <div id="noteModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle">Add New Note</h2>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <form id="noteForm">
+              <div class="form-group">
+                <label for="noteTitle">Title</label>
+                <input type="text" id="noteTitle" required />
+              </div>
+              <div class="form-group">
+                <label for="noteContent">Content</label>
+                <textarea id="noteContent" rows="6" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="noteCategory">Category</label>
+                <select id="noteCategory">
+                  <option value="personal">Personal</option>
+                  <option value="work">Work</option>
+                  <option value="ideas">Ideas</option>
+                  <option value="reminders">Reminders</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="noteColor">Color</label>
+                <div class="color-picker">
+                  <div
+                    class="color-option"
+                    data-color="#ffffff"
+                    style="background-color: #ffffff; border: 1px solid #ddd"
+                  ></div>
+                  <div
+                    class="color-option"
+                    data-color="#fff3cd"
+                    style="background-color: #fff3cd"
+                  ></div>
+                  <div
+                    class="color-option"
+                    data-color="#d1ecf1"
+                    style="background-color: #d1ecf1"
+                  ></div>
+                  <div
+                    class="color-option"
+                    data-color="#d4edda"
+                    style="background-color: #d4edda"
+                  ></div>
+                  <div
+                    class="color-option"
+                    data-color="#f8d7da"
+                    style="background-color: #f8d7da"
+                  ></div>
+                  <div
+                    class="color-option selected"
+                    data-color="#e2e3e5"
+                    style="background-color: #e2e3e5"
+                  ></div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="button" id="cancelBtn" class="btn btn-secondary">
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary">Save Note</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

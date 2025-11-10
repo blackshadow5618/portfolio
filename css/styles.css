@@ -71,7 +71,7 @@ section {
   margin-bottom: 20px;
 }
 
-.filter-buttons button {
+.filter-buttons .filter-btn {
   background-color: #333;
   color: #fff;
   border: none;
@@ -81,7 +81,8 @@ section {
   transition: background-color 0.3s;
 }
 
-.filter-buttons button:hover {
+.filter-buttons .filter-btn:hover,
+.filter-buttons .filter-btn.active {
   background-color: #f39c12;
 }
 
